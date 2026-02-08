@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>conserta cllr - Assistência Técnica de Celulares</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <i class="fas fa-mobile-alt"></i>
+                <h1>conserta cllr</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Início</a></li>
+                <li><a href="#servicos">Serviços</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#contato">Contato</a></li>
+                <li><a href="orcamento.html" class="btn-orcamento">Solicitar Orçamento</a></li>
+            </ul>
+            <div class="hamburger">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h2>Conserto Rápido e Confiável de Celulares</h2>
+            <p>Especialistas em reparos de todas as marcas com garantia de 90 dias</p>
+            <a href="orcamento.html" class="btn-hero">Solicitar Orçamento Grátis</a>
+        </div>
+        <div class="hero-image">
+            <img src="https://i.pinimg.com/236x/b2/0a/b8/b20ab8835336f30487173491ce13c222.jpg" alt="Técnico consertando celular">
+        </div>
+    </section>
+
+    <!-- Serviços -->
+    <section id="servicos" class="services">
+        <h2 class="section-title">Nossos Serviços</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <i class="fas fa-tachometer-alt"></i>
+                <h3>Troca de Tela</h3>
+                <p>Reparo ou substituição de telas quebradas de qualquer modelo</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-battery-full"></i>
+                <h3>Troca de Bateria</h3>
+                <p>Substituição de baterias com baixa duração ou inchadas</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-water"></i>
+                <h3>Reparo Água</h3>
+                <p>Limpeza e reparo de celulares com danos por líquidos</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-microchip"></i>
+                <h3>Problemas de Hardware</h3>
+                <p>Reparo de componentes internos como placa-mãe e conectores</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-plug"></i>
+                <h3>Conector de Carga</h3>
+                <p>Substituição de conectores de carga danificados</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-volume-up"></i>
+                <h3>Alto-falante e Microfone</h3>
+                <p>Reparo ou troca de componentes de áudio</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Por que nos escolher -->
+    <section id="sobre" class="features">
+        <h2 class="section-title">Por que Escolher a conserta cllr?</h2>
+        <div class="features-list">
+            <div class="feature">
+                <i class="fas fa-clock"></i>
+                <h3>Serviço Rápido</h3>
+                <p>Muitos reparos feitos no mesmo dia</p>
+            </div>
+            <div class="feature">
+                <i class="fas fa-shield-alt"></i>
+                <h3>Garantia de 90 Dias</h3>
+                <p>Todos os serviços têm garantia</p>
+            </div>
+            <div class="feature">
+                <i class="fas fa-tools"></i>
+                <h3>Peças Originais</h3>
+                <p>Utilizamos peças de qualidade com procedência</p>
+            </div>
+            <div class="feature">
+                <i class="fas fa-dollar-sign"></i>
+                <h3>Orçamento Grátis</h3>
+                <p>Avaliação sem custo e transparência nos preços</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contato -->
+    <section id="contato" class="contact">
+        <h2 class="section-title">Entre em Contato</h2>
+        <div class="contact-container">
+            <div class="contact-info">
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div>
+                        <h3>Endereço</h3>
+                        <p>Rua das Reparações, 123 - Centro</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <div>
+                        <h3>Telefone</h3>
+                        <p>(11) 9999-8888</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <div>
+                        <h3>Email</h3>
+                        <p>contato@conserta cllr.com.br</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-clock"></i>
+                    <div>
+                        <h3>Horário de Funcionamento</h3>
+                        <p>Segunda a Sexta: 9h às 18h</p>
+                        <p>Sábado: 9h às 13h</p>
+                    </div>
+                </div>
+            </div>
+            <div class="contact-form">
+                <form id="contactForm">
+                    <input type="text" placeholder="Seu nome" required>
+                    <input type="email" placeholder="Seu email" required>
+                    <input type="tel" placeholder="Seu telefone">
+                    <textarea placeholder="Sua mensagem" rows="5" required></textarea>
+                    <button type="submit" class="btn-submit">Enviar Mensagem</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <i class="fas fa-mobile-alt"></i>
+                <h2>conserta cllr</h2>
+                <p>Seu celular em boas mãos</p>
+            </div>
+            <div class="footer-links">
+                <h3>Links Rápidos</h3>
+                <ul>
+                    <li><a href="#home">Início</a></li>
+                    <li><a href="#servicos">Serviços</a></li>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </div>
+            <div class="footer-social">
+                <h3>Siga-nos</h3>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 conserta cllr - Assistência Técnica de Celulares. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

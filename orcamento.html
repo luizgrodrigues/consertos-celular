@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solicitar Orçamento - TechFix</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <i class="fas fa-mobile-alt"></i>
+                <h1>TechFix</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Início</a></li>
+                <li><a href="index.html#servicos">Serviços</a></li>
+                <li><a href="index.html#sobre">Sobre</a></li>
+                <li><a href="index.html#contato">Contato</a></li>
+                <li><a href="orcamento.html" class="btn-orcamento">Solicitar Orçamento</a></li>
+            </ul>
+            <div class="hamburger">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Página de Orçamento -->
+    <section class="budget-page">
+        <div class="budget-container">
+            <h2>Solicitar Orçamento</h2>
+            <p class="budget-subtitle">Preencha o formulário abaixo para receber um orçamento gratuito</p>
+            
+            <form id="budgetForm">
+                <div class="form-group">
+                    <label for="name">Nome completo *</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">E-mail *</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="phone">Telefone *</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="deviceType">Tipo de dispositivo *</label>
+                    <select id="deviceType" name="deviceType" required>
+                        <option value="">Selecione</option>
+                        <option value="iphone">iPhone</option>
+                        <option value="samsung">Samsung</option>
+                        <option value="xiaomi">Xiaomi</option>
+                        <option value="motorola">Motorola</option>
+                        <option value="lg">LG</option>
+                        <option value="outro">Outro</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="deviceModel">Modelo do aparelho</label>
+                    <input type="text" id="deviceModel" name="deviceModel" placeholder="Ex: iPhone 12, Galaxy S20, etc.">
+                </div>
+                
+                <div class="form-group">
+                    <label>Problemas apresentados *</label>
+                    <div class="checkbox-group">
+                        <label>
+                            <input type="checkbox" name="problems" value="tela_quebrada">
+                            <span>Tela quebrada/trincada</span>
+                        </label>
+                        <label>
+                            <input type="checkbox" name="problems" value="bateria">
+                            <span>Bateria com pouca duração</span>
+                        </label>
+                        <label>
+                            <input type="checkbox" name="problems" value="nao_liga">
+                            <span>Não liga</span>
+                        </label>
+                        <label>
+                            <input type="checkbox" name="problems" value="conector_carga">
+                            <span>Problema no conector de carga</span>
+                        </label>
+                        <label>
+                            <input type="checkbox" name="problems" value="audio">
+                            <span>Problemas de áudio</span>
+                        </label>
+                        <label>
+                            <input type="checkbox" name="problems" value="agua">
+                            <span>Contato com água/líquido</span>
+                        </label>
+                        <label>
+                            <input type="checkbox" name="problems" value="outro">
+                            <span>Outro problema</span>
+                        </label>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="problemDescription">Descrição detalhada do problema *</label>
+                    <textarea id="problemDescription" name="problemDescription" rows="4" required placeholder="Descreva com detalhes o que aconteceu com seu aparelho..."></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label for="urgency">Urgência do reparo</label>
+                    <select id="urgency" name="urgency">
+                        <option value="normal">Normal (3-5 dias úteis)</option>
+                        <option value="urgente">Urgente (1-2 dias úteis)</option>
+                        <option value="muito_urgente">Muito urgente (mesmo dia)</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="budgetPreference">Preferência de orçamento</label>
+                    <select id="budgetPreference" name="budgetPreference">
+                        <option value="orcamento_online">Orçamento online</option>
+                        <option value="presencial">Avaliação presencial na loja</option>
+                        <option value="retirada">Retirada em domicílio</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label>
+                        <input type="checkbox" name="terms" required>
+                        <span>Concordo com os termos e condições *</span>
+                    </label>
+                </div>
+                
+                <button type="submit" class="btn-submit">Enviar Solicitação de Orçamento</button>
+            </form>
+            
+            <div class="budget-info">
+                <h3><i class="fas fa-info-circle"></i> Informações importantes</h3>
+                <ul>
+                    <li>O orçamento é totalmente gratuito e sem compromisso</li>
+                    <li>Entraremos em contato em até 2 horas úteis</li>
+                    <li>Para problemas complexos, pode ser necessária avaliação presencial</li>
+                    <li>Todos os reparos têm garantia de 90 dias</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <i class="fas fa-mobile-alt"></i>
+                <h2>TechFix</h2>
+                <p>Seu celular em boas mãos</p>
+            </div>
+            <div class="footer-links">
+                <h3>Links Rápidos</h3>
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="index.html#servicos">Serviços</a></li>
+                    <li><a href="index.html#sobre">Sobre</a></li>
+                    <li><a href="index.html#contato">Contato</a></li>
+                </ul>
+            </div>
+            <div class="footer-social">
+                <h3>Siga-nos</h3>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 TechFix - Assistência Técnica de Celulares. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="orcamento.js"></script>
+</body>
+</html>
