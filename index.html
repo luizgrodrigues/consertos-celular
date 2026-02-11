@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>conserta cllr - Assistência Técnica de Celulares</title>
+    <title>Vitor Smart Tech</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
@@ -13,7 +13,7 @@
         <nav class="navbar">
             <div class="logo">
                 <i class="fas fa-mobile-alt"></i>
-                <h1>conserta cllr</h1>
+                <h1>Vitor Smart Tech</h1>
             </div>
             <ul class="nav-links">
                 <li><a href="#home">Início</a></li>
@@ -36,7 +36,7 @@
             <a href="orcamento.html" class="btn-hero">Solicitar Orçamento Grátis</a>
         </div>
         <div class="hero-image">
-            <img src="https://static.vecteezy.com/ti/vetor-gratis/p1/3573083-mobile-phone-flat-design-with-tool-sign-vetor.jpg" alt="Técnico consertando celular">
+            <img src="https://i.pinimg.com/736x/f4/b3/af/f4b3af30c0090590f46216e85e258313.jpg" alt="Técnico consertando celular">
         </div>
     </section>
 
@@ -79,7 +79,7 @@
 
     <!-- Por que nos escolher -->
     <section id="sobre" class="features">
-        <h2 class="section-title">Por que Escolher a conserta cllr?</h2>
+        <h2 class="section-title">Por que Escolher a Vitor Smart Tech</h2>
         <div class="features-list">
             <div class="feature">
                 <i class="fas fa-clock"></i>
@@ -120,14 +120,14 @@
                     <i class="fas fa-phone"></i>
                     <div>
                         <h3>Telefone</h3>
-                        <p>(11) 9999-8888</p>
+                        <p>(43) 9604-4935</p>
                     </div>
                 </div>
                 <div class="contact-item">
                     <i class="fas fa-envelope"></i>
                     <div>
                         <h3>Email</h3>
-                        <p>contato@conserta cllr.com.br</p>
+                        <p>contato@Vitor Smart Tech.com.br</p>
                     </div>
                 </div>
                 <div class="contact-item">
@@ -141,11 +141,89 @@
             </div>
             <div class="contact-form">
                 <form id="contactForm">
-                    <input type="text" placeholder="Seu nome" required>
-                    <input type="email" placeholder="Seu email" required>
-                    <input type="tel" placeholder="Seu telefone">
-                    <textarea placeholder="Sua mensagem" rows="5" required></textarea>
-                    <button type="submit" class="btn-submit">Enviar Mensagem</button>
+                  <input type="text" id="inputNome" placeholder="Seu nome">
+                 <input type="email" id="inputEmail" placeholder="Seu e-mail">
+                 <textarea id="inputMensagem" placeholder="Sua mensagem"></textarea>
+  
+  <!-- Botão original -->
+  <button type="submit" class="btn-submit">Enviar Mensagem</button>
+</form>
+
+<script>
+// Pegar o botão
+const botaoSubmit = document.querySelector('.btn-submit');
+
+// Adicionar evento de clique
+botaoSubmit.addEventListener('click', function(event) {
+  // Prevenir comportamento padrão (envio do formulário)
+  event.preventDefault();
+  
+  // Coletar dados
+  const nome = document.getElementById('inputNome').value;
+  const email = document.getElementById('inputEmail').value;
+  const mensagem = document.getElementById('inputMensagem').value;
+  
+  // Validar
+  if (!nome) {
+    alert("Por favor, digite seu nome!");
+    return;
+  }
+  
+  // Criar mensagem
+  const textoWhatsApp = `
+  📋 *Problema com o celular*
+  
+  👤 *Nome:* ${nome}
+  📧 *E-mail:* ${email || "Não informado"}
+  💬 *Mensagem:*
+  ${mensagem || "Sem mensagem adicional"}
+  
+  _Enviado através do site em ${new Date().toLocaleDateString('pt-BR')}_
+  `;
+  
+  // Configurar
+  const config = {
+    numero: "5543988016282", // Seu número aqui
+    mensagem: textoWhatsApp
+  };
+  
+  // Função para enviar
+  enviarMensagem(config, this);
+});
+
+function enviarMensagem(config, botao) {
+  // Salvar texto original do botão
+  const textoOriginal = botao.textContent;
+  
+  // Mostrar carregamento
+  botao.textContent = "Preparando WhatsApp...";
+  botao.disabled = true;
+  
+  // Pequeno delay para feedback visual
+  setTimeout(() => {
+    // Criar URL
+    const url = `https://wa.me/${config.numero}?text=${encodeURIComponent(config.mensagem)}`;
+    
+    // Abrir WhatsApp
+    window.open(url, '_blank');
+    
+    // Feedback de sucesso
+    botao.textContent = "✓ Enviado com sucesso!";
+    botao.style.background = "#25d366";
+    
+    // Resetar após 3 segundos
+    setTimeout(() => {
+      botao.textContent = textoOriginal;
+      botao.style.background = "";
+      botao.disabled = false;
+      
+      // Limpar formulário (opcional)
+      document.getElementById('formContato').reset();
+    }, 3000);
+    
+  }, 500);
+}
+</script>
                 </form>
             </div>
         </div>
@@ -156,7 +234,7 @@
         <div class="footer-content">
             <div class="footer-logo">
                 <i class="fas fa-mobile-alt"></i>
-                <h2>conserta cllr</h2>
+                <h2>Vitor Smart Tech</h2>
                 <p>Seu celular em boas mãos</p>
             </div>
             <div class="footer-links">
@@ -178,7 +256,7 @@
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2024 conserta cllr - Assistência Técnica de Celulares. Todos os direitos reservados.</p>
+            <p>&copy; 2026 Vitor Smart Tech. Todos os direitos reservados.</p>
         </div>
     </footer>
 

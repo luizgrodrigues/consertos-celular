@@ -68,7 +68,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
         
         .budget-container {
-            background-color: white;
+            background-color: #59595a;
             padding: 2rem;
             border-radius: 10px;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
@@ -102,7 +102,7 @@ document.addEventListener('DOMContentLoaded', function() {
         .form-group textarea {
             width: 100%;
             padding: 0.8rem;
-            border: 1px solid #ddd;
+            border: 1px solid #0906bb;
             border-radius: 5px;
             font-family: inherit;
             font-size: 1rem;
@@ -173,8 +173,8 @@ if (hamburger) {
         navLinks.style.top = '100%';
         navLinks.style.left = '0';
         navLinks.style.width = '100%';
-        navLinks.style.backgroundColor = 'white';
+        navLinks.style.backgroundColor = '#59595a';
         navLinks.style.padding = '1rem';
-        navLinks.style.boxShadow = '0 5px 10px rgba(0,0,0,0.1)';
+        navLinks.style.boxShadow = '0 5px 10px rgba(0, 0, 0, 0.1)';
     });
 }
